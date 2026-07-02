@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  /* رنگ‌های سفارشی */
+  --color-primary: #e11d48;
+  --color-secondary: #0ea5e9;
+  --color-accent: #f59e0b;
+  --color-dark: #1a1a2e;
+
+  /* سایزهای سفارشی */
+  --font-size-huge: 5rem;
+  --font-size-tiny: 0.625rem;
+
+  /* فاصله‌های سفارشی */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+
+  /* border radius سفارشی */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+body {
+  font-family: Vazirmatn, sans-serif;
+}
