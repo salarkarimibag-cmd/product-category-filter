@@ -2,6 +2,7 @@
   "name": "my-frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://salarkarimibag-cmd.github.io/product-category-filter",
   "type": "module",
   "scripts": {
     "dev": "vite",
