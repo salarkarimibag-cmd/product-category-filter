@@ -1,6 +1,6 @@
 # 🛍️ Product Category Filter
 
-A simple React project for filtering products by category using **React Hooks**, **useMemo**, and **Tailwind CSS v4**.
+A simple and responsive React application that allows users to filter products by category. This project demonstrates the use of **React Hooks**, **useMemo** for performance optimization, and **Tailwind CSS v4** for modern UI styling.
 
 ---
 
@@ -10,11 +10,12 @@ A simple React project for filtering products by category using **React Hooks**,
 * 🔍 Filter products by category
 * ⚡ Optimize filtering with `useMemo`
 * 🎨 Responsive UI built with Tailwind CSS v4
-* 📭 Show a message when no products are found
+* 📭 Display a friendly message when no products are found
+* 🚀 Fast development with Vite
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Built With
 
 * React
 * JavaScript (ES6+)
@@ -28,13 +29,18 @@ A simple React project for filtering products by category using **React Hooks**,
 ```text
 src/
 │
+├── assets/
+│   ├── images/
+│   
+│
 ├── components/
 │   └── CategoryFilter.jsx
 │
 ├── data/
 │   └── products.js
 │
-├── assets/
+├── pages/
+│   └── Home.jsx
 │
 ├── App.jsx
 ├── main.jsx
@@ -45,35 +51,41 @@ src/
 
 ## 🚀 Getting Started
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/salarkarimibag-cmd/product-category-filter.git
 ```
 
-### Go to the project folder
+### 2. Navigate to the project directory
 
 ```bash
-cd your-repository
+cd product-category-filter
 ```
 
-### Install dependencies
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-### Start the development server
+### 4. Start the development server
 
 ```bash
 npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
 ```
 
 ---
 
 ## 📸 Preview
 
-You can add screenshots of your project here.
+Add screenshots of your application in a folder named `README-images`.
 
 Example:
 
@@ -83,26 +95,28 @@ README-images/
 └── filter.png
 ```
 
-Then display them like this:
+Then include them in the README like this:
 
 ```md
-![Home](README-images/home.png)
+![Home Page](README-images/home.png)
+
+![Category Filter](README-images/filter.png)
 ```
 
 ---
 
-## 📋 Project Features
+## 📋 Functionality
 
+* View all available products
 * Filter products by category
-* Responsive product grid
-* Optimized rendering with `useMemo`
+* Responsive product grid layout
+* Optimized rendering using `useMemo`
 * Clean and reusable React components
-* User-friendly interface
 
 ---
 
 ## 📄 License
 
-This project is created for learning React and Tailwind CSS.
+This project is created for learning and educational purposes.
 
-Feel free to use and modify it for educational purposes.
+Feel free to fork, modify, and improve it.
