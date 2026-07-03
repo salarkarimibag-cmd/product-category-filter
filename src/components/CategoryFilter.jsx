@@ -2,14 +2,18 @@ import { useMemo, useState } from "react";
 
 function CategoryFilter({ products = [] }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [search, setSearch] = useState("");
   const categories = useMemo(() => {
     return ["all", ...new Set(products.map((p) => p.category))];
   }, [products]);
   const filteredProducts = useMemo(() => {
-    return selectedCategory === "all"
-      ? products
-      : products.filter((p) => p.category === selectedCategory);
-  }, [selectedCategory, products]);
+    return products.filter((p) => {
+      const matchCategory =
+        selectedCategory === "all" || p.category === selectedCategory;
+      const matchSearch = p.name.toLowerCase().includes(search.toLowerCase());
+      return matchCategory && matchSearch;
+    });
+  }, [selectedCategory, search, products]);
 
   return (
     <div>
@@ -22,17 +26,38 @@ function CategoryFilter({ products = [] }) {
           {filteredProducts.length} محصول
         </span>
       </div>
-      <select
-        className="border border-gray-300 rounded-xl px-4 py-2 text-sm font-semibold text-gray-700 mb-4 focus:outline-none focus:ring-2 focus:ring-rose-400"
-        value={selectedCategory}
-        onChange={(e) => setSelectedCategory(e.target.value)}
-      >
-        {categories.map((cate) => (
-          <option key={cate} value={cate}>
-            {cate === "all" ? "همه" : cate}
-          </option>
-        ))}
-      </select>
+      <div className="flex gap-3 mb-6">
+        {/* input جستجو */}
+        <div className="relative flex-1">
+          <input
+            type="text"
+            placeholder="جستجو..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full border border-gray-300 rounded-xl px-4 py-2 text-sm font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-rose-100"
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              className="absolute left-4  top-1/3 -translate-y-1/3 text-gray-400 hover:text-gray-600"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+
+        <select
+          className="border border-gray-300 rounded-xl px-4 py-1.5 text-sm font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-rose-100"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          {categories.map((cate) => (
+            <option key={cate} value={cate}>
+              {cate === "all" ? "همه" : cate}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="">
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
