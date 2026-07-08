@@ -15,7 +15,7 @@ function ThemeToggle() {
       {/* Knob */}
       <motion.div
         animate={{
-          x: darkMode ? 32 : 0,
+          x: darkMode ? 0 : 32,
         }}
         transition={{
           type: "spring",

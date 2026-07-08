@@ -32,22 +32,7 @@ function CategoryFilter({
         </div>
 
         {/* جستجو و فیلتر */}
-        <div
-          className="
- relative
- z-40
- mb-8
- rounded-3xl
- border
- border-white/30
- bg-white/30
- p-6
- shadow-xl
- backdrop-blur-xl
- dark:border-white/10
- dark:bg-slate-800/40
- "
-        >
+        <div className="relative z-40 mb-8 rounded-3xl border border-white/30 bg-white/30 p-6 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-800/40">
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Input
               placeholder="جستجو..."
