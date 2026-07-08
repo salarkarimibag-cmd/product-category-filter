@@ -94,7 +94,7 @@ function Sidebar({ isOpen, onClose, selectedCategory, setSelectedCategory }) {
 
             {/* Categories */}
             <div className="mt-8 flex-1 overflow-y-auto overscroll-contain border-t border-gray-200 pt-6 pr-1 dark:border-slate-700">
-              {/* ✅ اصلاح شد */}
+              {/*  اصلاح شد */}
               <h3 className="mb-4 text-sm font-bold text-gray-500 dark:text-slate-400">
                 دسته‌بندی محصولات
               </h3>

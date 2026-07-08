@@ -10,40 +10,19 @@ function ThemeToggle() {
       onClick={toggleTheme}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="
-        fixed bottom-6 left-6
-        z-60
-
-        flex h-14 w-24 items-center
-        rounded-full
-
-        border border-white/20
-        bg-white/30
-        backdrop-blur-xl
-
-        shadow-xl
-        dark:border-white/10
-        dark:bg-slate-900/40
-      "
+      className="fixed bottom-4 left-4 z-50 flex h-12 w-20 items-center rounded-full border border-white/20 bg-white/30 shadow-xl backdrop-blur-xl transition-all duration-300 hover:shadow-2xl dark:border-white/10 dark:bg-slate-900/40 sm:bottom-6 sm:left-6"
     >
-      {/* پس‌زمینه متحرک */}
+      {/* Knob */}
       <motion.div
         animate={{
-          x: darkMode ? 48 : 0,
+          x: darkMode ? 32 : 0,
         }}
         transition={{
           type: "spring",
           stiffness: 300,
           damping: 22,
         }}
-        className="
-          absolute left-1
-          flex h-12 w-12 items-center justify-center
-          rounded-full
-          bg-white
-          shadow-lg
-          dark:bg-slate-800
-        "
+        className="absolute left-1 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg dark:bg-slate-800"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -51,6 +30,7 @@ function ThemeToggle() {
             initial={{ rotate: -180, opacity: 0 }}
             animate={{ rotate: 0, opacity: 1 }}
             exit={{ rotate: 180, opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >
             {darkMode ? (
               <HiMoon className="text-xl text-slate-200" />
@@ -61,9 +41,10 @@ function ThemeToggle() {
         </AnimatePresence>
       </motion.div>
 
-      <div className="flex w-full justify-between px-4">
-        <HiSun className="text-xl text-yellow-500" />
-        <HiMoon className="text-xl text-slate-300" />
+      {/* Icons */}
+      <div className="flex w-full items-center justify-between px-3">
+        <HiSun className="text-lg text-yellow-500" />
+        <HiMoon className="text-lg text-slate-300 dark:text-slate-400" />
       </div>
     </motion.button>
   );

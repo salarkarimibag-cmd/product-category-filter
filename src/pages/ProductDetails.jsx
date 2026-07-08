@@ -70,29 +70,7 @@ function ProductDetails() {
           whileHover={{ x: 4 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => navigate(-1)}
-          className="
-    mb-6
-    inline-flex
-    items-center
-    gap-2
-    rounded-2xl
-    border
-    border-white/30
-    bg-white/60
-    px-4
-    py-2.5
-    text-gray-700
-    shadow-lg
-    backdrop-blur-xl
-    transition-all
-    duration-300
-    hover:bg-rose-500
-    hover:text-white
-    dark:border-white/10
-    dark:bg-slate-800/70
-    dark:text-white
-    dark:hover:bg-rose-500
-  "
+          className="mb-6 inline-flex items-center gap-2 rounded-2xl border border-white/30 bg-white/60 px-4 py-2.5 text-gray-700 shadow-lg backdrop-blur-xl transition-all duration-300 hover:bg-rose-500 hover:text-white dark:border-white/10 dark:bg-slate-800/70 dark:text-white dark:hover:bg-rose-500"
         >
           <motion.span whileHover={{ x: 3 }}>
             <HiArrowRight className="text-xl" />
